@@ -505,11 +505,13 @@ function kamaDatepicker(elementID, opt) {
 		}
 
 		if (options.highlightSelectedDay) {
+			if(inputElement.val()){
 			var inputValue = inputElement.val();
 			inputValue = inputValue.split("/");
 			if (inputValue[0] == selectedYear && inputValue[1] == selectedMonth) {
 				mainDiv.find(".bd-selected-day").removeClass("bd-selected-day");
 				mainDiv.find(".day-" + parseInt(inputValue[2])).addClass("bd-selected-day");
+			}
 			}
 		}
 
